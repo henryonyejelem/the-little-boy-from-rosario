@@ -6,7 +6,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Roboto' : ['Roboto', 'sans-serif']        
+        'Roboto' : ['Roboto', 'sans-serif'],
+        'Kanit' : ['Kanit', 'sans-serif'],  
+        'SegoeUI' : ['SegoeUI-Semibold', 'sans-serif'],  
+        'QatarBold' : ['QatarBold', 'sans-serif'],     
+        'QatarHeavy' : ['QatarHeavy', 'sans-serif']  
       },
     },
   },
