@@ -1,6 +1,8 @@
 function Section(props){
     return(
-        <section>{props.children}</section>
+        <div className="absolute ">
+            <div>{props.children}</div>
+        </div>
     );
 }
 export default Section;
