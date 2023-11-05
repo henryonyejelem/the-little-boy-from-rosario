@@ -8,7 +8,7 @@ function SectionList(){
             <Nav/>
             <div className = "SaudiArabia h-[100vh] relative">       
                 <img src ={Saudi} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>        
-                <Section Home = "" Away = "" Score = "" Penalty = "" Fixture = "">
+                <Section Home = "Argentina" Away = "Saudi Arabia" Score = "1 : 2" Penalty = "" Fixture = "Group C">
                     At the start of this World Cup, it looked like another trophyless campaign was on the cards when Saudi Arabia fought back from a Messi opener to beat the South Americans 2-1 in the first of many tournament upsets.
                 </Section>  
             </div>
