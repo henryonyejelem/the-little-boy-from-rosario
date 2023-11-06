@@ -68,10 +68,11 @@ function Section(props){
 
     return(
         <div>
-            <div className="font-QatarBold text-[1.75rem] text-white text-center relative">
-                <img src={left} alt="" className="absolute h-[14px] right-[360px] top-[11px]" />
-                <img src={right} alt="" className="absolute h-[14px] left-[360px] top-[11px]"/>
+            <div className="font-QatarBold text-[1.75rem] text-white flex justify-center items-center gap-2">
+                <img src={left} alt="" className="h-[14px] right-[360px] top-[11px]" />
                 {props.Fixture}
+                <img src={right} alt="" className="h-[14px] left-[360px] top-[11px]"/>
+                
             </div>
             <div className="relative w-[100%] mt-5">
                 <div className="font-QatarHeavy text-[2.75rem] text-white absolute top-[15%] right-[325px]">{props.Home}</div>
