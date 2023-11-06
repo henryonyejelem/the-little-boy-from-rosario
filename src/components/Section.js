@@ -67,7 +67,7 @@ function Section(props){
     }
 
     return(
-        <div className="absolute translate-y-[40vh] w-[600px]">
+        <div>
             <div className="font-QatarBold text-[1.75rem] text-white text-center relative">
                 <img src={left} alt="" className="absolute h-[14px] right-[360px] top-[11px]" />
                 <img src={right} alt="" className="absolute h-[14px] left-[360px] top-[11px]"/>
