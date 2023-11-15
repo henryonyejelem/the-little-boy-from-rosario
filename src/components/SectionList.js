@@ -12,7 +12,7 @@ function SectionList(){
     return(
         <div className="SectionList relative">
             <Nav/>
-            <div className="h-[100vh] overflow-scroll">
+            <div className="h-[100vh]">
                 <div className = "SaudiArabia h-[100vh] relative">       
                     <img src ={Sau} alt ="" className="absolute -z-40 h-[100vh] object-cover"/> 
                     <div className="absolute translate-y-[40vh] w-[600px]">        
