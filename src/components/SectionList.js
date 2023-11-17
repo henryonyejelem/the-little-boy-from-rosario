@@ -1,4 +1,4 @@
-import { motion, useScroll,useTransform } from "framer-motion"
+import { motion, useScroll,useTransform} from "framer-motion"
 import { useRef } from "react";
 import Section from "./Section";
 import Nav from "./Nav";
@@ -16,11 +16,12 @@ function SectionList(){
         target: ref,
         offset: ["start start", "end end"]
     })
-    
+
+    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.13, 1])
 
     return(
         <div className="SectionList relative" ref = {ref}>
-            <Nav progress = {scrollYProgress}/>
+            <Nav progress = {scaleProgress}/>
             <div className="">
                 <div className = "SaudiArabia h-[100vh] relative">       
                     <img src ={Sau} alt ="" className="absolute -z-40 h-[100vh] object-cover"/> 
