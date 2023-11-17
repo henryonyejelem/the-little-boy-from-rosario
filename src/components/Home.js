@@ -13,8 +13,8 @@ function Home(){
     });
 
     const scaleOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-    const scaleTranslate = useTransform(scrollYProgress, [0, 1], [0, 400]);
-
+    const scaleTranslate = useTransform(scrollYProgress, [0, 1], [0, 250]);
+    
     return(
         <div className="Home h-[100vh] relative overflow-clip bg-black">
             <motion.div className="" 
@@ -22,11 +22,19 @@ function Home(){
                 style = {{opacity : scaleOpacity}}         
             >  
                 <motion.img src = {BG} alt="" className="h-[100vh] w-[100vw] object-cover"
-                    initial = {{opacity: 0.5}}
-                    animate = {{
-                    opacity: 1
-                    }} 
-                    transition={{duration: 4}}
+                    initial={{ 
+                        scale: 1.5,
+                        opacity: 100
+                    }}
+                    animate={{ 
+                        scale: 1,
+                        opacity: 50
+                    }}
+                    transition={{
+                        delay:1,
+                        duration:10,
+                        ease:"easeOut"
+                    }}
                 />
                 <motion.div className="title absolute top-[47vh] left-[23px]"
                     initial={{ 
@@ -36,8 +44,10 @@ function Home(){
                         opacity: 1,
                     }}
                     transition={{
-                        delay:5,
-                        duration:6
+                        ease: "easeIn",
+                        delay:2,
+                        duration:4
+
                     }}
 
                 >
@@ -48,19 +58,21 @@ function Home(){
                     src = {Messi}
                     className="h-[80vh] object-cover absolute bottom-0 right-0"
                     initial={{ 
-                        opacity: 0.15,
+                        opacity: 0.8,
                         x : 0,
                         scale: 1
                     }}
                     style = {{translateX: scaleTranslate}}
                     animate={{ 
                         opacity: 1,
+                        rotate: 2,
                         x : -5,
-                        scale: 1.05
+                        scale: 1.1
                     }}
                     transition={{
                         delay:1,
-                        duration:3
+                        duration:10,
+                        ease:"easeOut"
                     }}
                 />  
                 <motion.div className="absolute bottom-5 text-[11px] font-SegoeUI font-bold tracking-[0.0155rem] text-white text-center left-[23px] w-[35vw]"
@@ -71,7 +83,7 @@ function Home(){
                     }}
                     transition={{
                         y: {delay:6, duration:1, repeat: Infinity, repeatDelay: 2}, 
-                        opacity : {delay: 5, duration:1},
+                        opacity : {delay: 8, duration:1},
                         repeat: Infinity,
                     }}
                 >
@@ -84,14 +96,3 @@ function Home(){
 
 export default Home;
 
-/*
-Save State--1
-<div className="Home h-[100vh] relative">  
-    <div className="title absolute top-[47vh] left-[23px]">
-        <div className="text-center text-white font-Kanit font-bold tracking-[3px] opacity-[30%] text-[14px]">THE LITTLE BOY FROM</div>
-        <img src = {Rosario} alt="" className="w-[35vw]"/> 
-    </div>
-    <img src = {Background} alt="" className="h-[100vh] w-[100vw] object-cover"/>
-    <div className="absolute bottom-5 text-[11px] font-SegoeUI font-bold tracking-[0.0155rem] text-white text-center left-[23px] w-[35vw]">Scroll Down</div>                     
-</div>
-*/ 

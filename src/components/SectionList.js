@@ -1,3 +1,5 @@
+import { motion, useScroll,useTransform } from "framer-motion"
+import { useRef } from "react";
 import Section from "./Section";
 import Nav from "./Nav";
 import Sau from "../images/saudiArabia/Background.jpg"
@@ -9,10 +11,17 @@ import Cro from "../images/crotia/Background.png"
 import Fra from "../images/france/Background.png"
 
 function SectionList(){
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start start", "end end"]
+    })
+    
+
     return(
-        <div className="SectionList relative">
-            <Nav/>
-            <div className="h-[100vh]">
+        <div className="SectionList relative" ref = {ref}>
+            <Nav progress = {scrollYProgress}/>
+            <div className="">
                 <div className = "SaudiArabia h-[100vh] relative">       
                     <img src ={Sau} alt ="" className="absolute -z-40 h-[100vh] object-cover"/> 
                     <div className="absolute translate-y-[40vh] w-[600px]">        

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Rosario from "../images/home/ROSARIO.png"
 import Saudi from "../images/country flags/1x/Saudi Arabia.png"
 import Mexico from "../images/country flags/1x/Mexico.png"
@@ -6,9 +7,14 @@ import Aust from "../images/country flags/1x/Australia.png"
 import Neth from "../images/country flags/1x/Netherlands.png"
 import Crot from "../images/country flags/1x/Crotia.png"
 import France from "../images/country flags/1x/France.png"
-function Nav(){
+function Nav(props){
     return(
-        <div className="Nav absolute top-10 z-40 w-[100%]">  
+        <motion.div className="Nav sticky h-0 top-0 z-40 w-[100%]"
+            initial={{opacity: 0, y: 60}}
+            whileInView={{ opacity: 1, y: 40 }}
+            transition={{ delay: 1, ease: "easeOut", duration: 6, type:"spring" }} 
+            viewport={{ once: true }}     
+        >  
             <div className="flex-col justify-center w-[70vw] mx-auto">         
                 <div className="text-white text-center font-Kanit font-bold tracking-[3px] opacity-60 text-[6px]">THE LITTLE BOY FROM</div>
                 <div className="w-[100%] flex justify-center"><img src = {Rosario} alt="" className="w-[15vw]"/></div>
@@ -54,7 +60,7 @@ function Nav(){
 
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 
