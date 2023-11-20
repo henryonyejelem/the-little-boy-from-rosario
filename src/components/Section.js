@@ -1,4 +1,4 @@
-import { easeInOut, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import logo from "../images/worldCup logo/Logo.png"
 import left from "../images/assets/Left.png"
 import right from "../images/assets/Right.png"

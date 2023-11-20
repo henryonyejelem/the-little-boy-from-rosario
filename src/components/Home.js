@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform} from "framer-motion"
 import { useRef } from "react"
 import Rosario from "../images/home/ROSARIO.png"
-import Background from "../images/home/Background.jpg"
 import Messi from "../images/home/Messi.png"
 import BG from "../images/home/BG.png"
 

@@ -1,14 +1,22 @@
-import { motion, useScroll,useTransform} from "framer-motion"
+import {  motion, useScroll, useTransform} from "framer-motion"
 import { useRef } from "react";
 import Section from "./Section";
 import Nav from "./Nav";
-import Sau from "../images/saudiArabia/Background.jpg"
-import Mex from "../images/mexico/Background.png"
-import Pol from "../images/poland/Background.png"
-import Aus from "../images/australia/Background.png"
-import Net from "../images/netherland/Background.png"
-import Cro from "../images/crotia/Background.png"
 import Fra from "../images/france/Background.png"
+
+import Sau_BG from "../images/saudiArabia/Background.png"
+import Sau_Messi from "../images/saudiArabia/Messi.png"
+import Mex_BG from  "../images/mexico/BG.png"
+import Mex_Messi from  "../images/mexico/Messi.png"
+import Pol_BG from "../images/poland/BG.png"
+import Pol_Messi from "../images/poland/Messi.png"
+import Pol_Ball from "../images/poland/Ball.png"
+import Aus from "../images/australia/Background.png"
+import Neth_BG from "../images/netherland/BG.png"
+import Neth_Messi from "../images/netherland/Messi.png"
+import Crot_Messi from "../images/crotia/Messi.png"
+import Crot_Ball from "../images/crotia/Ball.png"
+import Crot_BG from "../images/crotia/BG.png"
 
 function SectionList(){
     const ref = useRef(null);
@@ -24,7 +32,13 @@ function SectionList(){
             <Nav progress = {scaleProgress}/>
             <div className="">
                 <div className = "SaudiArabia h-[100vh] relative">       
-                    <img src ={Sau} alt ="" className="absolute -z-40 h-[100vh] object-cover"/> 
+                    <img src ={Sau_BG} alt ="" className="absolute h-[100vh] object-cover"/> 
+                    <motion.img src ={Sau_Messi} alt ="" className="absolute h-[80vh] object-cover right-[125px] bottom-0"
+                       initial = {{translateX : -50}}
+                       whileInView = {{translateX : 0}}
+                       transition={{duration : 17}}
+                       viewport={{once : "true"}}                    
+                    /> 
                     <div className="absolute translate-y-[40vh] w-[600px]">        
                         <Section Home = "Argentina" Away = "Saudi Arabia" Score = "1 : 2" Penalty = "" Fixture = "Group C">
                             At the start of this World Cup, it looked like another trophyless campaign was on the cards when Saudi Arabia fought back from a Messi opener to beat the South Americans 2-1 in the first of many tournament upsets.
@@ -32,7 +46,13 @@ function SectionList(){
                     </div>
                 </div>
                 <div className = "Mexico h-[100vh] relative">
-                    <img src ={Mex} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>   
+                    <img src ={Mex_BG} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>   
+                    <motion.img src ={Mex_Messi} alt ="" className="absolute -z-40 h-[75vh] left-0 bottom-0 object-cover"
+                        initial = {{translateX : 50}}
+                        whileInView = {{translateX : 120}}
+                        transition={{duration : 20}} 
+                        viewport={{once : "true"}} 
+                    /> 
                     <div className="absolute translate-y-[40vh] w-[600px] right-0">               
                         <Section Home = "Argentina" Away = "Mexico" Score = "2 - 0" Penalty = "" Fixture = "Group C">
                             Lionel Messi rescued Argentina from the brink of World Cup elimination, scoring the crucial opening goal in a 2-0 win over Mexico at Lusail Iconic Stadium in Qatar to put the South American champions back on track to reach the last 16.
@@ -40,7 +60,20 @@ function SectionList(){
                     </div>
                 </div>
                 <div className = "Poland h-[100vh] relative">
-                    <img src ={Pol} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>   
+                    <img src ={Pol_BG} alt ="" className="absolute -z-40 h-[100vh] object-cover"/> 
+                    <motion.img src ={Pol_Messi} alt ="" className="absolute -z-40 h-[73vh] object-cover bottom-0 right-0"
+                        initial = {{translateX : 0}}
+                        whileInView = {{translateX : -60}}
+                        transition={{duration : 20}} 
+                        viewport={{once : "true"}}                     
+                    /> 
+                    <motion.img src ={Pol_Ball} alt ="" className="absolute -z-40 h-[8vh] object-cover bottom-0 right-[350px]"
+                        initial = {{translateX : 0}}
+                        whileInView = {{translateX : -120}}
+                        transition={{duration : 20}} 
+                        viewport={{once : "true"}}                     
+                    />
+
                     <div className="absolute translate-y-[40vh] w-[600px]">               
                         <Section Home = "Poland" Away = "Argentina" Score = "0 - 2" Penalty = "" Fixture = "Group C">
                             Argentina made sure of their place in the round of 16 with a 2-0 victory over Poland at Stadium 974 on Wednesday. Poland, a well beaten side on this occasion, will join them in the knockout stages thanks to their superior goal difference over a Mexico side who also finished on four points.  
@@ -56,15 +89,34 @@ function SectionList(){
                     </div>
                 </div>
                 <div className = "Netherland h-[100vh] relative">
-                    <img src ={Net} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>   
+                    <img src ={Neth_BG} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>   
+                    <motion.img src ={Neth_Messi} alt ="" className="absolute -z-40 h-[70vh] object-cover bottom-0 left-0"
+                        initial = {{translateX : 0}}
+                        whileInView = {{translateX : 90}}
+                        transition={{duration : 20}} 
+                        viewport={{once : "true"}} 
+                    />  
                     <div className="absolute translate-y-[40vh] w-[600px] right-0">               
                         <Section Home = "Netherland" Away = "Argentina" Score = "2 - 2" Penalty = "" Fixture = "Quartar Finals">
                             Argentina claimed a dramatic 4-3 penalty shootout victory over Netherlands on Friday to claim a spot in the World Cup semifinals after initially throwing away a two-goal lead in a late collapse in regulation time
                         </Section>
                     </div>
                 </div>
-                <div className = "Crotia h-[100vh] relative">
-                    <img src ={Cro} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>   
+                <div className = "Crotia h-[100vh] relative overflow-clip">
+                    <img src ={Crot_BG} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>
+                    <motion.img src ={Crot_Ball} alt ="" className="absolute -z-40 h-[10vh] object-cover bottom-0 right-0"
+                        initial = {{translateX : -550, translateY : -80, rotate : 0}}
+                        whileInView = {{translateX : -500, translateY : -140, rotate : -50}}                       
+                        transition={{duration : 20}} 
+                        viewport={{once : "true"}}                     
+                    />    
+                    <motion.img src ={Crot_Messi} alt ="" className="absolute -z-40 h-[100vh] object-cover bottom-0 right-0"
+                        initial = {{translateX : 0, translateY : 30}}
+                        whileInView = {{translateX : 60, translateY : 0}}                        
+                        transition={{duration : 20}} 
+                        viewport={{once : "true"}} 
+                    /> 
+                    
                     <div className="absolute translate-y-[40vh] w-[600px] right-0">               
                         <Section Home = "Argentina" Away = "Crotia" Score = "3 - 0" Penalty = "" Fixture = "Semi Finals">
                             Argentina and Lionel Messi have done it yet again. The South American powerhouse will play in the World Cup final after defeating Croatia 3-0.
