@@ -127,7 +127,7 @@ function Section(props){
                initial = {{opacity : 0, y : 10}}
                whileInView = {{opacity : 0.8, y : 0}}
                viewport={{once : "true"}}
-               transition = {{delay : 3, duration : 3, ease : "easeIn", type : "spring"}} 
+               transition = {{delay : 3, duration : 5, ease : "easeIn", type : "spring"}} 
             >
                 {props.children}
             </motion.div>
