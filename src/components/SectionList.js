@@ -16,7 +16,8 @@ import Neth_Messi from "../images/netherland/Messi.png"
 import Crot_Messi from "../images/crotia/Messi.png"
 import Crot_Ball from "../images/crotia/Ball.png"
 import Crot_BG from "../images/crotia/BG.png"
-import Fra from "../images/france/Background.png"
+import Fra_BG from "../images/france/BG.png"
+import Fra_Messi from "../images/france/Messi.png"
 import conf_L from "../images/assets/confetti_left.png"
 import conf_R from "../images/assets/confetti_right.png"
 
@@ -49,7 +50,9 @@ function SectionList(){
 
     const CrotTProgress = useTransform(scrollYProgress, [dist*4, dist*4+dist2, dist*5, (dist*5 + dist2)], [0, 500, 0, -200])
 
+    const FraProgress = useTransform(scrollYProgress, [dist*5, dist*5+dist2, dist*6], [0, height/4, 0])
     const FraTProgress = useTransform(scrollYProgress, [dist*5, dist*5+dist2, dist*6], [0, 500, 0])
+    
 
 
 
@@ -164,9 +167,12 @@ function SectionList(){
                     </motion.div>
                 </div>
                 <div className = "France h-[100vh] relative">
-                    <img src ={Fra} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>  
+                    <img src ={Fra_BG} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>  
                     <img src ={conf_L} alt ="" className="absolute -z-40 h-[100vh] object-cover opacity-60 left-0"/>   
                     <img src ={conf_R} alt ="" className="absolute -z-40 h-[100vh] object-cover opacity-60 right-0"/> 
+                    <motion.img src ={Fra_Messi} alt ="" className="absolute -z-40 left-[35%] bottom-0 h-[80vh] object-cover"
+                        style = {{translateY : FraProgress}}
+                    /> 
                     <motion.div className="absolute top-[38%] w-[600px]"
                         style = {{translateY : FraTProgress}}
                     >               
