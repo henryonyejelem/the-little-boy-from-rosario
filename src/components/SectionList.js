@@ -17,6 +17,8 @@ import Crot_Messi from "../images/crotia/Messi.png"
 import Crot_Ball from "../images/crotia/Ball.png"
 import Crot_BG from "../images/crotia/BG.png"
 import Fra from "../images/france/Background.png"
+import conf_L from "../images/assets/confetti_left.png"
+import conf_R from "../images/assets/confetti_right.png"
 
 function SectionList(){
     const ref = useRef(null);
@@ -162,7 +164,9 @@ function SectionList(){
                     </motion.div>
                 </div>
                 <div className = "France h-[100vh] relative">
-                    <img src ={Fra} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>   
+                    <img src ={Fra} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>  
+                    <img src ={conf_L} alt ="" className="absolute -z-40 h-[100vh] object-cover opacity-60 left-0"/>   
+                    <img src ={conf_R} alt ="" className="absolute -z-40 h-[100vh] object-cover opacity-60 right-0"/> 
                     <motion.div className="absolute top-[38%] w-[600px]"
                         style = {{translateY : FraTProgress}}
                     >               
