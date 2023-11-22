@@ -91,14 +91,14 @@ function SectionList(){
                     <img src ={Pol_BG} alt ="" className="absolute -z-40 h-[100vh] object-cover"/> 
                     <motion.img src ={Pol_Messi} alt ="" className="absolute -z-40 h-[73vh] object-cover bottom-0 right-0"
                         initial = {{translateX : 0}}
-                        whileInView = {{translateX : -100}}
+                        whileInView = {{translateX : -70}}
                         transition={{duration : 15, delay : 0, ease : "easeOut"}}
 
                         style={{translateY : Progress(scrollYProgress, 2)}}
                     /> 
                     <motion.img src ={Pol_Ball} alt ="" className="absolute -z-40 h-[8vh] object-cover bottom-0 right-[350px]"
                         initial = {{translateX : 0}}
-                        whileInView = {{translateX : -250, delay : 1}}
+                        whileInView = {{translateX : -150, delay : 1}}
                         transition={{duration : 15}}                    
                     />
 
@@ -138,13 +138,13 @@ function SectionList(){
                     </motion.div>
                 </div>
                 <div className = "Crotia h-[100vh] relative overflow-clip">
-                    <img src ={Crot_BG} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>
+                    <img src ={Crot_BG} alt ="" className="absolute -z-40 h-[100vh] "/>
                     <motion.img src ={Crot_Ball} alt ="" className="absolute -z-40 h-[10vh] object-cover bottom-0 right-0"
                         initial = {{translateX : -560, translateY : -80, rotate : 0}}
                         whileInView = {{translateX : -510, translateY : -170, rotate : -50}}                       
                         transition={{duration : 20}}                     
                     />    
-                    <motion.img src ={Crot_Messi} alt ="" className="absolute -z-40 h-[100vh] object-cover bottom-0 right-0"
+                    <motion.img src ={Crot_Messi} alt ="" className="absolute -z-40 h-[50vh] object-cover bottom-0 right-[40%]"
                         initial = {{translateX : 0, translateY : 30}}
                         whileInView = {{translateX : 60, translateY : 0}}                        
                         transition={{duration : 20}} 
@@ -161,11 +161,16 @@ function SectionList(){
                 <div className = "France h-[100vh] relative overflow-clip">
                     <img src ={Fra_BG} alt ="" className="absolute -z-40 h-[100vh] object-cover"/>  
                     <motion.img src ={conf_L} alt ="" className="absolute -z-40 h-[100vh] object-cover opacity-60 left-0"
-                        style={{translateY : useTransform(scrollYProgress, [dist*5, dist*5+dist2, dist*6], [0, -height/4, 0])}}
+                        initial = {{translateY : -60}}
+                        whileInView = {{translateY : 0}}
+                        transition={{duration : 20, ease : "easeOut", delay : 1}}                        
                     />   
                     <motion.img src ={conf_R} alt ="" className="absolute -z-40 h-[100vh] object-cover opacity-60 right-0"
-                        style={{translateY : useTransform(scrollYProgress, [dist*5, dist*5+dist2, dist*6], [0, -height/4, 0])}}
-                    /> 
+                        initial = {{translateY : -60}}
+                        whileInView = {{translateY : 0}}
+                        transition={{duration : 20, ease : "easeOut", delay : 1}}                        
+                    />
+                     
                     <motion.img src ={Fra_Messi} alt ="" className="absolute -z-40 left-[35%] bottom-0 h-[80vh] object-cover"
                         initial = {{translateY : 100}}
                         whileInView = {{translateY : 0}}
