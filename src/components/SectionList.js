@@ -31,7 +31,6 @@ function Progress(value, i){
 
 function TextProgress(value, i){
     const dist = 1 / 6
-    const height = window.innerHeight;
 
     const j = i-1;
     return useTransform(value, [(dist*j), (dist*2*i - dist)/2, dist*i, (dist*i*2 + dist)/2], [0, 500, 0, -200]);
