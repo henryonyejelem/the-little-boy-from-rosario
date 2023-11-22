@@ -10,7 +10,9 @@ module.exports = {
         'Kanit' : ['Kanit', 'sans-serif'],  
         'SegoeUI' : ['SegoeUI-Semibold', 'sans-serif'],  
         'QatarBold' : ['QatarBold', 'sans-serif'],     
-        'QatarHeavy' : ['QatarHeavy', 'sans-serif']  
+        'QatarHeavy' : ['QatarHeavy', 'sans-serif'],  
+        'HelveticaBold' : ['HelveticaBold', 'sans-serif'],  
+        'Helvetica' : ['Helvetica', 'sans-serif']  
       },
     },
   },

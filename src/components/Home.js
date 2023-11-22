@@ -50,7 +50,7 @@ function Home(){
                     }}
 
                 >
-                    <div className="text-center text-white font-Kanit font-bold tracking-[3px] opacity-[30%] text-[14px]">THE LITTLE BOY FROM</div>
+                    <div className="text-center text-white font-HelveticaBold font-bold tracking-[5px] opacity-[30%] text-[0.7825rem] mb-[5px]">THE LITTLE BOY FROM</div>
                     <img src = {Rosario} alt="" className="w-[35vw]"/> 
                 </motion.div>
                 <motion.img
