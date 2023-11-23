@@ -42,10 +42,7 @@ function SectionList(){
         target: ref,
         offset: ["start start", "end end"]
     })
-
-    const dist = 1 / 6;
-    const dist2 = dist / 2;
-    const height = window.innerHeight;
+    
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.13, 1])
 
     return(
